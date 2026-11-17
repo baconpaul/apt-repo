@@ -56,6 +56,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "two-filters",
+      "versions": [
+        {
+          "version": "1.1.0~nightly.20261117.130.f6b0d7b",
+          "debs": [
+            "content/two-filters_1.1.0.nightly.20261117.130.f6b0d7b_amd64.deb",
+            "content/two-filters_1.1.0.nightly.20261117.130.f6b0d7b_arm64.deb"
+          ]
+        }
+      ]
     }
   ]
 }

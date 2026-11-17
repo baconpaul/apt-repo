@@ -34,16 +34,7 @@ Check it with `gpg --show-keys /etc/apt/keyrings/baconpaul-apt-repo.asc`. It
 expires in November 2028 and will be extended before then; a machine then needs
 the refreshed key file, fetched the same way.
 
-## Packages
-
-| package     | what                                        | arches       |
-|-------------|---------------------------------------------|--------------|
-| six-sines   | Six Sines synth (CLAP, VST3, standalone)    | arm64, amd64 |
-| leeward     | A Band Called Leeward, a sndstation game    | arm64        |
-| bacon-beats | Bacon Beats, a sndstation app               | arm64        |
-
-leeward and bacon-beats need the `sndstation` package, which comes from
-sndstation's own source.
+## Versions
 
 Nightlies are versioned `X.Y.Z~nightly.<date>.<count>.<hash>` (before the
 X.Y.Z release) or `X.Y.Z+nightly...` (after it), so apt moves between nightlies
