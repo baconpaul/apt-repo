@@ -1,0 +1,61 @@
+{
+  "channel": "distro",
+  "github_repo": "baconpaul/apt-repo",
+  "origin": "baconpaul",
+  "label": "baconpaul apt-repo",
+  "description": "baconpaul plugins and games for sndstation and debian",
+  "architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "public_key_asset": "baconpaul-apt-repo.asc",
+  "verify_sources": [
+    {
+      "name": "sndstation",
+      "uris": "https://sndstation.s3.us-west-1.amazonaws.com",
+      "suites": "stable",
+      "components": "main",
+      "key": "keys/sndstation-archive-keyring.asc",
+      "key_from": "the sndstation repo, packaging/sndstation-archive-keyring.asc",
+      "architectures": [
+        "arm64"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "leeward",
+      "versions": [
+        {
+          "version": "1.1.0-1",
+          "debs": [
+            "content/leeward_1.1.0-1_arm64.deb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bacon-beats",
+      "versions": [
+        {
+          "version": "0.13.0-1",
+          "debs": [
+            "content/bacon-beats_0.13.0-1_arm64.deb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "six-sines",
+      "versions": [
+        {
+          "version": "1.2.1+nightly.20261117.548.e61cfcc",
+          "debs": [
+            "content/six-sines_1.2.1.nightly.20261117.548.e61cfcc_amd64.deb",
+            "content/six-sines_1.2.1.nightly.20261117.548.e61cfcc_arm64.deb"
+          ]
+        }
+      ]
+    }
+  ]
+}
