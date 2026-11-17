@@ -28,7 +28,7 @@ def main():
     for p in cfg["packages"]:
         for v in p["versions"]:
             for src in v["debs"]:
-                deb = aptlib.fetch_deb(src)
+                deb = aptlib.fetch_deb(src, aptlib.repo_url(cfg))
                 control = aptlib.read_control(deb)
                 f = aptlib.parse_control(control)
 

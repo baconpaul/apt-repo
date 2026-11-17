@@ -70,14 +70,20 @@ def is_url(src):
     return src.startswith("http://") or src.startswith("https://")
 
 
-def fetch_deb(src):
+def fetch_deb(src, published_url=None):
     if not is_url(src):
         p = Path(src)
         if not p.is_absolute():
             p = ROOT / p
-        if not p.is_file():
+        if p.is_file():
+            return p
+        if not published_url:
             raise AptError(f"missing deb: {p}")
-        return p
+        # a fresh checkout has no content/, but the release already holds the deb
+        try:
+            return fetch_deb(published_url + p.name)
+        except OSError as e:
+            raise AptError(f"missing deb: {p}, and {published_url}{p.name} failed: {e}")
 
     cache = ROOT / "cache"
     cache.mkdir(exist_ok=True)
