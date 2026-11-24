@@ -44,15 +44,15 @@
       "name": "bacon-beats",
       "versions": [
         {
-          "version": "0.14.0-1",
+          "version": "0.15.0-1",
           "debs": [
-            "content/bacon-beats_0.14.0-1_arm64.deb"
+            "content/bacon-beats_0.15.0-1_arm64.deb"
           ]
         },
         {
-          "version": "0.13.0-1",
+          "version": "0.14.0-1",
           "debs": [
-            "content/bacon-beats_0.13.0-1_arm64.deb"
+            "content/bacon-beats_0.14.0-1_arm64.deb"
           ]
         }
       ]
